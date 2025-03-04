@@ -540,6 +540,147 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Expertise and Credibility Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
+              Nearly two decades of creating magical digital experiences
+            </h2>
+            <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
+              Leading digital transformations across multiple technology waves, now pioneering AI integration
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Stats and Recognition */}
+            <div className="space-y-8">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">200+</div>
+                  <div className="text-gray-500">Digital Projects Delivered</div>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">18+</div>
+                  <div className="text-gray-500">Years Experience</div>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">25+</div>
+                  <div className="text-gray-500">Industries Served</div>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">95%</div>
+                  <div className="text-gray-500">Client Satisfaction</div>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-xl font-bold mb-4">Technology Evolution</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Internet Boom Era</h4>
+                      <p className="text-gray-500">Built foundational digital experiences for early adopters</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">Mobile Revolution</h4>
+                      <p className="text-gray-500">Transformed customer engagement through responsive design</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold">AI Wave</h4>
+                      <p className="text-gray-500">Creating intelligent, personalized experiences</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Expertise Areas */}
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-xl font-bold mb-6">Core Expertise</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Digital Strategy</span>
+                      <span className="text-sm font-medium">98%</span>
+                    </div>
+                    <div className="w-full bg-slate-100 rounded-full h-2">
+                      <div className="bg-slate-900 h-2 rounded-full" style={{ width: "98%" }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">User Experience Design</span>
+                      <span className="text-sm font-medium">96%</span>
+                    </div>
+                    <div className="w-full bg-slate-100 rounded-full h-2">
+                      <div className="bg-slate-900 h-2 rounded-full" style={{ width: "96%" }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Technical Architecture</span>
+                      <span className="text-sm font-medium">94%</span>
+                    </div>
+                    <div className="w-full bg-slate-100 rounded-full h-2">
+                      <div className="bg-slate-900 h-2 rounded-full" style={{ width: "94%" }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">AI Integration</span>
+                      <span className="text-sm font-medium">92%</span>
+                    </div>
+                    <div className="w-full bg-slate-100 rounded-full h-2">
+                      <div className="bg-slate-900 h-2 rounded-full" style={{ width: "92%" }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-xl font-bold mb-4">Impact Focus</h3>
+                <p className="text-gray-500 mb-6">Throughout these waves, our focus has remained consistent: creating measurable business impact through exceptional digital experiences.</p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+                    <span className="text-slate-600 font-medium">ROI Driven</span>
+                  </div>
+                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+                    <span className="text-slate-600 font-medium">User Centered</span>
+                  </div>
+                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+                    <span className="text-slate-600 font-medium">Data Informed</span>
+                  </div>
+                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+                    <span className="text-slate-600 font-medium">Future Ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
         <div className="container px-4 md:px-6 mx-auto">
