@@ -14,9 +14,9 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: "M22 | Human Expertise Meets AI Innovation",
-  description: "M22 is a digital transformation agency helping businesses create better digital experiences that customers love and teams can actually use. We combine human expertise with AI innovation to deliver practical, measurable results.",
-  keywords: "digital transformation, AI implementation, customer experience, business case, digital agency",
-  authors: [{ name: "M22 Digital Transformation Agency" }],
+  description: "M22 helps businesses create digital experiences that people actually love to use. We combine human expertise with AI innovation to deliver practical solutions that make technology work for your team and customers.",
+  keywords: "human-centered design, AI solutions, practical technology, user experience, business results",
+  authors: [{ name: "M22" }],
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "M22 | Human Expertise Meets AI Innovation",
-    description: "Creating better digital experiences that your customers will love and your team can actually use",
+    description: "Creating digital experiences that people actually love to use. We make technology simple, smart, and human.",
     url: "https://m22.com",
-    siteName: "M22 Digital Transformation Agency",
+    siteName: "M22",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "M22 | Human Expertise Meets AI Innovation",
-    description: "Creating better digital experiences that your customers will love and your team can actually use",
+    description: "Creating digital experiences that people actually love to use. We make technology simple, smart, and human.",
   },
 };
 
