@@ -59,14 +59,15 @@ export function NavMenu({ className }: NavMenuProps) {
         }}
       >
         <GlowingEffect 
-          blur={8}
-          borderWidth={3}
+          blur={12}
+          borderWidth={4}
           spread={0}
           glow={true}
           disabled={false}
           proximity={64}
           inactiveZone={0.01}
-          color="linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #6366f1)"
+          animated={true}
+          color="linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #f43f5e, #6366f1)"
         />
         
         <div className="flex items-center gap-2">

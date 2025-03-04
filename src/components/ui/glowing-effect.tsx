@@ -11,6 +11,7 @@ interface GlowingEffectProps {
   proximity?: number;
   inactiveZone?: number;
   color?: string;
+  animated?: boolean;
 }
 
 export function GlowingEffect({
@@ -22,10 +23,11 @@ export function GlowingEffect({
   proximity = 50,
   inactiveZone = 0.01,
   color = "linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #6366f1)",
+  animated = true,
 }: GlowingEffectProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [opacity, setOpacity] = useState(0);
+  const [opacity, setOpacity] = useState(0.8); // Start with visible opacity
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
@@ -54,13 +56,13 @@ export function GlowingEffect({
         setIsHovered(true);
       } else {
         // Mouse is outside the active zone
-        setOpacity(0);
+        setOpacity(0.8); // Keep high opacity even when not hovered
         setIsHovered(false);
       }
     };
 
     const handleMouseLeave = () => {
-      setOpacity(0);
+      setOpacity(0.8); // Keep high opacity even when not hovered
       setIsHovered(false);
     };
 
@@ -83,23 +85,86 @@ export function GlowingEffect({
       ref={containerRef}
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-[inherit]"
     >
-      {/* Border glow effect */}
+      {/* Outer glow for extra visibility */}
       <div
-        className="absolute inset-0 z-[-1] rounded-[inherit] transition-all duration-300"
+        className={`absolute inset-0 z-[-3] rounded-[inherit] transition-all duration-300 ${animated ? 'animate-border-outer-glow' : ''}`}
         style={{
-          opacity: disabled ? 0 : isHovered ? 1 : 0.5,
+          opacity: disabled ? 0 : 0.9,
+          boxShadow: `0 0 ${blur * 2}px ${blur}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'}`,
+        }}
+      />
+      
+      {/* Animated border glow effect */}
+      <div
+        className={`absolute inset-0 z-[-1] rounded-[inherit] transition-all duration-300 ${animated ? 'animate-border-glow' : ''}`}
+        style={{
+          opacity: disabled ? 0 : isHovered ? 1 : 0.9,
           boxShadow: `inset 0 0 0 ${actualBorderWidth}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'}`,
-          filter: `blur(${isHovered ? blur : blur / 2}px)`,
+          filter: `blur(${isHovered ? blur : blur / 1.5}px)`,
         }}
       />
       
       {/* Solid border underneath */}
       <div
-        className="absolute inset-0 z-[-2] rounded-[inherit] transition-all duration-300"
+        className={`absolute inset-0 z-[-2] rounded-[inherit] transition-all duration-300 ${animated ? 'animate-border-pulse' : ''}`}
         style={{
           boxShadow: `inset 0 0 0 ${borderWidth}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'}`,
         }}
       />
+
+      {/* Add keyframes for the animations */}
+      <style jsx global>{`
+        @keyframes border-glow {
+          0% {
+            filter: blur(${blur}px) brightness(1);
+          }
+          50% {
+            filter: blur(${blur * 1.5}px) brightness(1.2);
+          }
+          100% {
+            filter: blur(${blur}px) brightness(1);
+          }
+        }
+        
+        @keyframes border-pulse {
+          0% {
+            opacity: 0.8;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.8;
+          }
+        }
+        
+        @keyframes border-outer-glow {
+          0% {
+            opacity: 0.7;
+            box-shadow: 0 0 ${blur * 2}px ${blur}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'};
+          }
+          50% {
+            opacity: 0.9;
+            box-shadow: 0 0 ${blur * 2.5}px ${blur * 1.5}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'};
+          }
+          100% {
+            opacity: 0.7;
+            box-shadow: 0 0 ${blur * 2}px ${blur}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'};
+          }
+        }
+        
+        .animate-border-glow {
+          animation: border-glow 3s infinite;
+        }
+        
+        .animate-border-pulse {
+          animation: border-pulse 3s infinite;
+        }
+        
+        .animate-border-outer-glow {
+          animation: border-outer-glow 4s infinite;
+        }
+      `}</style>
     </div>
   );
 } 
