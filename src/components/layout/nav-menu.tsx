@@ -68,18 +68,32 @@ export function NavMenu({ className }: NavMenuProps) {
           position: "relative",
         }}
       >
-        {/* Fine line glow border */}
+        {/* Fine line glow border with animation */}
         <motion.div 
-          className="absolute inset-0 rounded-full -z-10"
+          className="absolute inset-0 rounded-full -z-10 border-glow-animation"
           style={{
-            background: "linear-gradient(90deg, #6366f1, #a855f7, #ec4899)",
+            background: "linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #6366f1)",
+            backgroundSize: "300% 100%",
             padding: "1px",
             opacity: borderGlowOpacity,
             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",
             maskComposite: "exclude",
+            animation: "rotate-gradient 10s linear infinite",
           }}
         />
+        
+        {/* Add keyframes for the animation */}
+        <style jsx global>{`
+          @keyframes rotate-gradient {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 300% 50%;
+            }
+          }
+        `}</style>
         
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
