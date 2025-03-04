@@ -41,7 +41,7 @@ export default function Home() {
       <section className="w-full py-24 md:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center space-y-8 text-center">
-            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-slate-900">
+            <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
               Feeling stuck with your digital experience?
             </h2>
             <p className="max-w-[700px] text-slate-600 text-lg md:text-xl leading-relaxed">
@@ -50,19 +50,19 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-8">
               <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">Making Tech Work</h3>
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Making Tech Work</h3>
                 <p className="text-slate-600 text-center">
                   Want to use new tools like AI but not sure how to make them practical for your business?
                 </p>
               </div>
               <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">Customer Experience</h3>
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Customer Experience</h3>
                 <p className="text-slate-600 text-center">
                   Need to make your digital experience more personal and engaging for your customers?
                 </p>
               </div>
               <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">Real Results</h3>
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Real Results</h3>
                 <p className="text-slate-600 text-center">
                   Looking for practical ways to measure and improve the impact of your digital investments?
                 </p>
@@ -77,7 +77,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col space-y-6">
-              <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-slate-900">
+              <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
                 Simple solutions to complex digital challenges
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
@@ -96,14 +96,14 @@ export default function Home() {
               </ul>
             </div>
             <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
-              <h3 className="font-display text-2xl font-semibold text-slate-900 mb-6">How We Work</h3>
+              <h3 className="font-display text-2xl font-medium text-slate-900 mb-6">How We Work</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-900 font-semibold">
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Listen & Understand</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Listen & Understand</h4>
                     <p className="text-slate-600 mt-1">Get to know your business, team, and customers</p>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export default function Home() {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Design & Build</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Design & Build</h4>
                     <p className="text-slate-600 mt-1">Create solutions that are simple to use and maintain</p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function Home() {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Test & Improve</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Test & Improve</h4>
                     <p className="text-slate-600 mt-1">Make sure everything works and keeps getting better</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function Home() {
       <section className="w-full py-24 md:py-32 bg-white overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
+            <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
               Your Journey with M22
             </h2>
             <p className="max-w-[700px] mx-auto text-slate-600 text-lg leading-relaxed">
@@ -179,7 +179,7 @@ export default function Home() {
                           1
                         </div>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900 mb-3">Discovery</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900 mb-3">Discovery</h3>
                       <p className="text-slate-600 text-center">
                         Initial assessment and strategy alignment
                       </p>
@@ -192,7 +192,7 @@ export default function Home() {
                           2
                         </div>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900 mb-3">Design</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900 mb-3">Design</h3>
                       <p className="text-slate-600 text-center">
                         Solution architecture and AI integration
                       </p>
@@ -205,7 +205,7 @@ export default function Home() {
                           3
                         </div>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900 mb-3">Development</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900 mb-3">Development</h3>
                       <p className="text-slate-600 text-center">
                         Implementation and testing
                       </p>
@@ -218,7 +218,7 @@ export default function Home() {
                           4
                         </div>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900 mb-3">Growth</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900 mb-3">Growth</h3>
                       <p className="text-slate-600 text-center">
                         Continuous optimization and scaling
                       </p>
@@ -238,7 +238,7 @@ export default function Home() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900">Strategic Planning</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900">Strategic Planning</h3>
                     </div>
                     <p className="text-slate-600 mb-6">Expert analysis enhanced by AI-powered market insights and trend prediction</p>
                     <ul className="space-y-3 text-slate-600">
@@ -265,7 +265,7 @@ export default function Home() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                         </svg>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900">AI Integration</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900">AI Integration</h3>
                     </div>
                     <p className="text-slate-600 mb-6">Seamless integration of AI tools with your existing business processes</p>
                     <ul className="space-y-3 text-slate-600">
@@ -292,7 +292,7 @@ export default function Home() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                       </div>
-                      <h3 className="font-display text-xl font-semibold text-slate-900">Team Enablement</h3>
+                      <h3 className="font-display text-xl font-medium text-slate-900">Team Enablement</h3>
                     </div>
                     <p className="text-slate-600 mb-6">Empower your team with AI tools while maintaining human expertise</p>
                     <ul className="space-y-3 text-slate-600">
@@ -322,7 +322,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Month 1
                       </div>
-                      <h3 className="font-display text-xl font-bold mb-2">Initial Assessment</h3>
+                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Initial Assessment</h3>
                       <p className="text-gray-500">Comprehensive analysis of your current processes and AI opportunities</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -353,7 +353,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Months 2-3
                       </div>
-                      <h3 className="font-display text-xl font-bold mb-2">Solution Design</h3>
+                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Solution Design</h3>
                       <p className="text-gray-500">Creating the perfect blend of human expertise and AI capabilities</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -384,7 +384,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Months 4-6
                       </div>
-                      <h3 className="font-display text-xl font-bold mb-2">Implementation</h3>
+                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Implementation</h3>
                       <p className="text-gray-500">Carefully managed rollout with continuous monitoring and adjustment</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -432,7 +432,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
+            <h2 className="font-display text-2xl font-normal tracking-tighter sm:text-3xl md:text-4xl mb-4">
               Choose your path to innovation
             </h2>
             <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
@@ -448,7 +448,7 @@ export default function Home() {
                   Full Service
                 </span>
               </div>
-              <h3 className="font-display text-xl font-bold mb-4">We Do It For You</h3>
+              <h3 className="font-display text-xl font-normal mb-4">We Do It For You</h3>
               <p className="text-gray-500 mb-6">
                 Our team handles everything from strategy to implementation, combining our expertise with AI tools to deliver complete solutions.
               </p>
@@ -480,7 +480,7 @@ export default function Home() {
                   Collaborative
                 </span>
               </div>
-              <h3 className="font-display text-xl font-bold mb-4">We Do It With You</h3>
+              <h3 className="font-display text-xl font-normal mb-4">We Do It With You</h3>
               <p className="text-slate-300 mb-6">
                 Partner with our team to augment your capabilities, transfer knowledge, and accelerate your AI transformation.
               </p>
@@ -512,7 +512,7 @@ export default function Home() {
                   Long-term
                 </span>
               </div>
-              <h3 className="font-display text-xl font-bold mb-4">Strategic Partnership</h3>
+              <h3 className="font-display text-xl font-normal mb-4">Strategic Partnership</h3>
               <p className="text-gray-500 mb-6">
                 Long-term collaboration to guide your organization's AI journey with strategic planning and ongoing support.
               </p>
@@ -544,7 +544,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
+            <h2 className="font-display text-2xl font-normal tracking-tighter sm:text-3xl md:text-4xl mb-4">
               Nearly two decades of creating magical digital experiences
             </h2>
             <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
@@ -557,25 +557,25 @@ export default function Home() {
             <div className="space-y-8">
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-bold text-slate-900 mb-2">200+</div>
+                  <div className="text-3xl font-normal text-slate-900 mb-2">200+</div>
                   <div className="text-gray-500">Digital Projects Delivered</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-bold text-slate-900 mb-2">18+</div>
+                  <div className="text-3xl font-normal text-slate-900 mb-2">18+</div>
                   <div className="text-gray-500">Years Experience</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-bold text-slate-900 mb-2">25+</div>
+                  <div className="text-3xl font-normal text-slate-900 mb-2">25+</div>
                   <div className="text-gray-500">Industries Served</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-bold text-slate-900 mb-2">95%</div>
+                  <div className="text-3xl font-normal text-slate-900 mb-2">95%</div>
                   <div className="text-gray-500">Client Satisfaction</div>
                 </div>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-bold mb-4">Technology Evolution</h3>
+                <h3 className="font-display text-xl font-normal mb-4">Technology Evolution</h3>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
@@ -584,7 +584,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold">Internet Boom Era</h4>
+                      <h4 className="font-normal">Internet Boom Era</h4>
                       <p className="text-gray-500">Built foundational digital experiences for early adopters</p>
                     </div>
                   </div>
@@ -595,7 +595,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold">Mobile Revolution</h4>
+                      <h4 className="font-normal">Mobile Revolution</h4>
                       <p className="text-gray-500">Transformed customer engagement through responsive design</p>
                     </div>
                   </div>
@@ -606,7 +606,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold">AI Wave</h4>
+                      <h4 className="font-normal">AI Wave</h4>
                       <p className="text-gray-500">Creating intelligent, personalized experiences</p>
                     </div>
                   </div>
@@ -617,7 +617,7 @@ export default function Home() {
             {/* Right Column - Expertise Areas */}
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-bold mb-6">Core Expertise</h3>
+                <h3 className="font-display text-xl font-normal mb-6">Core Expertise</h3>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between mb-1">
@@ -659,7 +659,7 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-bold mb-4">Impact Focus</h3>
+                <h3 className="font-display text-xl font-normal mb-4">Impact Focus</h3>
                 <p className="text-gray-500 mb-6">Throughout these waves, our focus has remained consistent: creating measurable business impact through exceptional digital experiences.</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
@@ -686,7 +686,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col space-y-6">
-              <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-slate-900">
+              <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
                 Our Business Case Methodology
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
@@ -699,7 +699,7 @@ export default function Home() {
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Frame the Financial Story</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Frame the Financial Story</h4>
                     <p className="text-slate-600 mt-1">We identify the key financial drivers and metrics that matter most to your business</p>
                   </div>
                 </div>
@@ -709,7 +709,7 @@ export default function Home() {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Establish Baselines</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Establish Baselines</h4>
                     <p className="text-slate-600 mt-1">We measure current performance to create a foundation for tracking improvements</p>
                   </div>
                 </div>
@@ -719,7 +719,7 @@ export default function Home() {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Project ROI</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Project ROI</h4>
                     <p className="text-slate-600 mt-1">We create realistic projections for return on investment with clear timelines</p>
                   </div>
                 </div>
@@ -729,7 +729,7 @@ export default function Home() {
                     4
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-slate-900">Align Stakeholders</h4>
+                    <h4 className="text-lg font-medium text-slate-900">Align Stakeholders</h4>
                     <p className="text-slate-600 mt-1">We ensure everyone understands the expected outcomes and their role in achieving them</p>
                   </div>
                 </div>
@@ -738,7 +738,7 @@ export default function Home() {
             
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
-                <h3 className="font-display text-2xl font-semibold text-slate-900 mb-6">Business Case Components</h3>
+                <h3 className="font-display text-2xl font-medium text-slate-900 mb-6">Business Case Components</h3>
                 <ul className="space-y-4 text-slate-600">
                   <li className="flex items-start">
                     <span className="mr-3 text-slate-900">•</span>
@@ -781,7 +781,7 @@ export default function Home() {
       <section className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
+            <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
               Frequently Asked Questions
             </h2>
             <p className="max-w-[700px] mx-auto text-slate-600 text-lg leading-relaxed">
@@ -792,7 +792,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="space-y-6">
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   How do you start each engagement?
                 </h3>
                 <p className="text-slate-600">
@@ -801,7 +801,7 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   How long does a typical digital transformation take?
                 </h3>
                 <p className="text-slate-600">
@@ -810,7 +810,7 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   How do you approach AI implementation?
                 </h3>
                 <p className="text-slate-600">
@@ -821,7 +821,7 @@ export default function Home() {
 
             <div className="space-y-6">
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   How do you measure success?
                 </h3>
                 <p className="text-slate-600">
@@ -830,7 +830,7 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   What makes M22 different from other agencies?
                 </h3>
                 <p className="text-slate-600">
@@ -839,7 +839,7 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-semibold text-slate-900 mb-4">
+                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
                   Do you provide ongoing support?
                 </h3>
                 <p className="text-slate-600">
@@ -862,7 +862,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col space-y-6">
-              <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
+              <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-white">
                 Ready to transform your digital experience?
               </h2>
               <p className="text-slate-300 text-lg leading-relaxed">
@@ -895,14 +895,14 @@ export default function Home() {
             </div>
             
             <div className="bg-slate-800 p-8 rounded-lg border border-slate-700">
-              <h3 className="font-display text-2xl font-semibold text-white mb-6">What to Expect</h3>
+              <h3 className="font-display text-2xl font-medium text-white mb-6">What to Expect</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-slate-700 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-sm text-white">1</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Brief Discovery</h4>
+                    <h4 className="font-medium text-white">Brief Discovery</h4>
                     <p className="text-slate-300 mt-1">We'll discuss your current challenges and goals</p>
                   </div>
                 </li>
@@ -911,7 +911,7 @@ export default function Home() {
                     <span className="text-sm text-white">2</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Opportunity Identification</h4>
+                    <h4 className="font-medium text-white">Opportunity Identification</h4>
                     <p className="text-slate-300 mt-1">We'll identify potential areas for improvement</p>
                   </div>
                 </li>
@@ -920,7 +920,7 @@ export default function Home() {
                     <span className="text-sm text-white">3</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Next Steps</h4>
+                    <h4 className="font-medium text-white">Next Steps</h4>
                     <p className="text-slate-300 mt-1">We'll outline a potential path forward if there's a good fit</p>
                   </div>
                 </li>
@@ -935,7 +935,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0">
-              <h3 className="font-display text-xl font-semibold text-white mb-2">M22</h3>
+              <h3 className="font-display text-xl font-medium text-white mb-2">M22</h3>
               <p className="text-slate-400">
                 Creates digital experiences that work for real people and real businesses
               </p>
