@@ -814,23 +814,26 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col space-y-4">
               <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
-                Ready to start your AI journey?
+                Ready to transform your digital experience?
               </h2>
               <p className="text-slate-300 md:text-lg">
-                Book a free strategy call with our team. We'll discuss your goals, challenges, and how we can help you leverage AI effectively.
+                Book a free 30-minute Strategy Call to discover where your digital experience could work harder for your business. We'll identify quick wins and long-term AI opportunities, and outline how to build a compelling business case for each.
+              </p>
+              <p className="text-slate-300 md:text-lg italic">
+                You'll walk away with valuable insights, whether we end up working together or not.
               </p>
               <div className="space-y-4 mt-8">
                 <div className="flex items-center space-x-3">
                   <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-slate-300">+1 (555) 123-4567</span>
+                  <span className="text-slate-300">(555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-slate-300">contact@m22.dev</span>
+                  <span className="text-slate-300">hello@m22.com</span>
                 </div>
               </div>
             </div>
@@ -871,13 +874,29 @@ export default function Home() {
                   />
                 </div>
                 <Button className="w-full">
-                  Book Your Free Strategy Call
+                  Book Your Strategy Call Now
                 </Button>
               </form>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="w-full py-8 bg-slate-950 text-white">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p className="text-slate-300 md:text-lg">
+                M22 designs digital experiences that deliver measurable business results.
+              </p>
+              <p className="text-sm text-slate-400 mt-4">
+                © 2024 M22 Digital Transformation Agency
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
