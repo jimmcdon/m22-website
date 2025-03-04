@@ -18,13 +18,13 @@ export function NavMenu({ className }: NavMenuProps) {
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(255, 255, 255, 0.85)", "rgba(255, 255, 255, 0.95)"]
+    ["rgba(255, 255, 255, 0.5)", "rgba(255, 255, 255, 0.7)"]
   )
   
   const boxShadow = useTransform(
     scrollY,
     [0, 100],
-    ["0 4px 6px rgba(0, 0, 0, 0)", "0 4px 10px rgba(0, 0, 0, 0.1)"]
+    ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
   )
   
   // Check if scrolled for class changes
@@ -49,28 +49,50 @@ export function NavMenu({ className }: NavMenuProps) {
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
       <motion.nav
         className={cn(
-          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300",
-          isScrolled ? "backdrop-blur-md" : "backdrop-blur-sm",
-          className
+          "fixed left-0 right-0 top-0 z-50",
+          "flex h-16 items-center justify-between px-4 transition-all duration-200 ease-in-out md:px-6",
+          isScrolled ? "h-16" : "h-20"
         )}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
         style={{
-          backgroundColor,
-          boxShadow,
+          background: useTransform(
+            scrollY,
+            [0, 0.1],
+            ["rgba(255, 255, 255, 0.3)", "rgba(255, 255, 255, 0.5)"]
+          ),
+          boxShadow: useTransform(
+            scrollY,
+            [0, 0.1],
+            ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
+          ),
         }}
       >
-        <GlowingEffect 
-          blur={12}
-          borderWidth={4}
-          spread={0}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-          animated={true}
-          color="linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #f43f5e, #6366f1)"
+        {/* Glow Effect Container */}
+        <div className="absolute inset-0 z-0">
+          <GlowingEffect
+            blur={8}
+            borderWidth={3}
+            spread={0}
+            color="linear-gradient(90deg, rgb(99, 102, 241), rgb(168, 85, 247), rgb(236, 73, 153), rgb(244, 63, 94), rgb(99, 102, 241))"
+            animated={true}
+          />
+        </div>
+
+        {/* Backdrop blur container */}
+        <div 
+          className={cn(
+            "absolute inset-0 z-10 transition-all duration-200",
+            isScrolled ? "backdrop-blur-[2px]" : "backdrop-blur-none"
+          )} 
         />
-        
-        <div className="flex items-center gap-2">
+
+        {/* Main content container */}
+        <div className="relative z-20 flex w-full items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="text-slate-900 w-8 h-8">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" className="text-slate-900">
@@ -82,7 +104,7 @@ export function NavMenu({ className }: NavMenuProps) {
           </Link>
         </div>
         
-        <div className="hidden md:flex items-center gap-1">
+        <div className="relative z-10 hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -94,7 +116,7 @@ export function NavMenu({ className }: NavMenuProps) {
           ))}
         </div>
         
-        <div className="md:hidden">
+        <div className="relative z-10 md:hidden">
           <button className="p-2 text-slate-700 hover:text-slate-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
