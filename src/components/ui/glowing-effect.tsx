@@ -75,28 +75,28 @@ export function GlowingEffect({
     };
   }, [disabled, glow, inactiveZone]);
 
+  // Calculate the actual border width (doubled when hovered)
+  const actualBorderWidth = isHovered ? borderWidth * 2 : borderWidth;
+
   return (
     <div
       ref={containerRef}
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-[inherit]"
     >
+      {/* Border glow effect */}
       <div
-        className="absolute inset-0 z-[-1] transition-opacity duration-500"
+        className="absolute inset-0 z-[-1] rounded-[inherit] transition-all duration-300"
         style={{
-          opacity: disabled ? 0 : opacity,
-          background: color,
-          left: `${position.x - spread}px`,
-          top: `${position.y - spread}px`,
-          width: `${spread * 2}px`,
-          height: `${spread * 2}px`,
-          borderRadius: "50%",
-          filter: `blur(${blur}px)`,
+          opacity: disabled ? 0 : isHovered ? 1 : 0.5,
+          boxShadow: `inset 0 0 0 ${actualBorderWidth}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'}`,
+          filter: `blur(${isHovered ? blur : blur / 2}px)`,
         }}
       />
+      
+      {/* Solid border underneath */}
       <div
-        className="absolute inset-0 z-[-1] rounded-[inherit] transition-opacity duration-500"
+        className="absolute inset-0 z-[-2] rounded-[inherit] transition-all duration-300"
         style={{
-          opacity: disabled ? 0 : isHovered ? 1 : 0,
           boxShadow: `inset 0 0 0 ${borderWidth}px ${typeof color === 'string' ? color : 'rgba(99, 102, 241, 0.8)'}`,
         }}
       />

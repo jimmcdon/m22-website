@@ -59,9 +59,9 @@ export function NavMenu({ className }: NavMenuProps) {
         }}
       >
         <GlowingEffect 
-          blur={15}
-          borderWidth={2}
-          spread={80}
+          blur={8}
+          borderWidth={3}
+          spread={0}
           glow={true}
           disabled={false}
           proximity={64}
