@@ -50,10 +50,10 @@ const ZenHero = React.forwardRef<HTMLElement, HeroProps>(
         <div 
           className="absolute inset-0 z-0 opacity-10"
           style={{
-            backgroundImage: "url('/zen-circle.svg')",
+            backgroundImage: "url('/zencircle.svg')",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
+            backgroundSize: "120%"
           }}
         />
 
