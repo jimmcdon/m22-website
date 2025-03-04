@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-import { Hero } from "@/components/blocks/hero";
+import { ZenHero } from "@/components/blocks/zen-hero";
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-slate-50">
       {/* Hero Section */}
-      <Hero
+      <ZenHero
         title="Human expertise meets AI innovation"
         subtitle="Helping businesses like yours create better digital experiences that your customers will love and your team can actually use"
         actions={[
