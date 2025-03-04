@@ -49,8 +49,7 @@ export function NavMenu({ className }: NavMenuProps) {
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
       <motion.nav
         className={cn(
-          "fixed left-0 right-0 top-0 z-50",
-          "flex h-16 items-center justify-between px-4 transition-all duration-200 ease-in-out md:px-6",
+          "relative flex h-16 items-center justify-between px-4 rounded-full transition-all duration-200 ease-in-out md:px-6",
           isScrolled ? "h-16" : "h-20"
         )}
         initial={{ y: -100 }}
@@ -59,37 +58,41 @@ export function NavMenu({ className }: NavMenuProps) {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        style={{
-          background: useTransform(
-            scrollY,
-            [0, 0.1],
-            ["rgba(255, 255, 255, 0.3)", "rgba(255, 255, 255, 0.5)"]
-          ),
-          boxShadow: useTransform(
-            scrollY,
-            [0, 0.1],
-            ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
-          ),
-        }}
       >
-        {/* Glow Effect Container */}
-        <div className="absolute inset-0 z-0">
+        {/* Background container with blur */}
+        <div 
+          className="absolute inset-0 rounded-full overflow-hidden"
+          style={{
+            background: useTransform(
+              scrollY,
+              [0, 0.1],
+              ["rgba(255, 255, 255, 0.3)", "rgba(255, 255, 255, 0.5)"]
+            ).get(),
+            boxShadow: useTransform(
+              scrollY,
+              [0, 0.1],
+              ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
+            ).get(),
+          }}
+        >
+          <div 
+            className={cn(
+              "absolute inset-0 transition-all duration-200",
+              isScrolled ? "backdrop-blur-[2px]" : "backdrop-blur-none"
+            )} 
+          />
+        </div>
+
+        {/* Glow Effect Container - Now outside the background container */}
+        <div className="absolute inset-0 rounded-full">
           <GlowingEffect
-            blur={8}
-            borderWidth={3}
-            spread={0}
+            blur={12}
+            borderWidth={2}
+            spread={24}
             color="linear-gradient(90deg, rgb(99, 102, 241), rgb(168, 85, 247), rgb(236, 73, 153), rgb(244, 63, 94), rgb(99, 102, 241))"
             animated={true}
           />
         </div>
-
-        {/* Backdrop blur container */}
-        <div 
-          className={cn(
-            "absolute inset-0 z-10 transition-all duration-200",
-            isScrolled ? "backdrop-blur-[2px]" : "backdrop-blur-none"
-          )} 
-        />
 
         {/* Main content container */}
         <div className="relative z-20 flex w-full items-center justify-between">
@@ -102,26 +105,26 @@ export function NavMenu({ className }: NavMenuProps) {
             </div>
             <span className="font-display text-xl font-medium text-slate-900">M22</span>
           </Link>
-        </div>
-        
-        <div className="relative z-10 hidden md:flex items-center gap-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-full transition-colors hover:bg-white/50"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-        
-        <div className="relative z-10 md:hidden">
-          <button className="p-2 text-slate-700 hover:text-slate-900">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-full transition-colors hover:bg-white/50"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          
+          <div className="md:hidden">
+            <button className="p-2 text-slate-700 hover:text-slate-900">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
       </motion.nav>
     </div>
