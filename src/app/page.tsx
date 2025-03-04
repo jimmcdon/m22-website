@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ZenHero } from "@/components/blocks/zen-hero";
 import { FeatureCard } from "@/components/blocks/feature-card";
 import { Sparkles } from "@/components/ui/sparkles";
+import { NavMenu } from "@/components/layout/nav-menu";
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
@@ -21,6 +22,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50">
+      {/* Navigation */}
+      <NavMenu />
+      
       {/* Hero Section */}
       <ZenHero
         title="Human expertise meets AI innovation"
@@ -40,7 +44,7 @@ export default function Home() {
       <Separator className="bg-slate-200" />
       
       {/* Does This Sound Familiar Section */}
-      <section className="w-full py-24 md:py-32 bg-white">
+      <section id="services" className="w-full py-24 md:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center space-y-8 text-center">
             <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
@@ -72,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Our North Star Approach */}
-      <section className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
+      <section id="approach" className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col space-y-6">
@@ -540,9 +544,9 @@ export default function Home() {
       </section>
 
       {/* Expertise and Credibility Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+      <section id="case-studies" className="w-full py-24 md:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="font-display text-2xl font-normal tracking-tighter sm:text-3xl md:text-4xl mb-4">
               Nearly two decades of creating magical digital experiences
             </h2>
@@ -777,7 +781,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
+      <section id="faq" className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
@@ -942,7 +946,7 @@ export default function Home() {
             <div className="flex space-x-6">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
                 </svg>
               </a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
