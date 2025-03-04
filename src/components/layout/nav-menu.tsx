@@ -61,11 +61,9 @@ export function NavMenu({ className }: NavMenuProps) {
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
           <div className="text-slate-900 w-8 h-8">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-slate-900">
-              <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M20 0C20 0 30 8.9543 30 20C30 31.0457 20 40 20 40C20 40 10 31.0457 10 20C10 8.9543 20 0 20 0Z" fill="currentColor"/>
-              <circle cx="20" cy="10" r="3" fill="white"/>
-              <circle cx="20" cy="30" r="3" fill="currentColor" stroke="white" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" className="text-slate-900">
+              <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0"/>
+              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7m7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334"/>
             </svg>
           </div>
           <span className="font-display text-xl font-medium text-slate-900">M22</span>
