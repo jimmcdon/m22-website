@@ -23,11 +23,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-slate-50">
       {/* Hero Section */}
       <ZenHero
-        title={
-          <Sparkles background={true} backgroundColors={["#94a3b8", "#64748b", "#475569"]} speed={0.5}>
-            Human expertise meets AI innovation
-          </Sparkles>
-        }
+        title="Human expertise meets AI innovation"
         subtitle="Helping businesses like yours create better digital experiences that your customers will love and your team can actually use"
         actions={[
           {
