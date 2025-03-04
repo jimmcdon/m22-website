@@ -816,7 +816,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
-              Common questions about digital transformation and AI implementation
+              Common questions about our approach to digital transformation
             </p>
           </div>
 
@@ -824,10 +824,19 @@ export default function Home() {
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="font-display text-lg font-bold mb-2">
+                  How do you start each engagement?
+                </h3>
+                <p className="text-gray-500">
+                  Every engagement begins with our proven business case analysis. We follow a structured approach to frame the financial story, identify primary business goals, calculate baselines, and project ROI. This ensures all stakeholders have clarity on expected outcomes before we begin. <a href="#business-case" className="text-slate-900 underline">Learn more about our business case methodology</a>.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
                   How long does a typical digital transformation take?
                 </h3>
                 <p className="text-gray-500">
-                  While every project is unique, most transformations take 4-6 months from strategy to implementation. We break this into manageable phases and deliver value incrementally, so you'll see results throughout the journey.
+                  After completing the initial business case analysis, most transformations take 4-6 months from strategy to implementation. We break this into manageable phases and deliver value incrementally, so you'll see results throughout the journey.
                 </p>
               </div>
 
@@ -836,16 +845,7 @@ export default function Home() {
                   What's your approach to AI implementation?
                 </h3>
                 <p className="text-gray-500">
-                  We believe in responsible AI integration that enhances rather than replaces human capabilities. Our approach starts with identifying high-impact, low-risk opportunities and gradually expanding based on proven success.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-lg font-bold mb-2">
-                  How do you measure success?
-                </h3>
-                <p className="text-gray-500">
-                  We establish clear KPIs at the start of each project, tied directly to your business objectives. Whether it's increased revenue, reduced costs, or improved efficiency, we track and report progress throughout the engagement.
+                  We believe in responsible AI integration that enhances rather than replaces human capabilities. Our approach starts with identifying high-impact, low-risk opportunities and gradually expanding based on proven success and clear business cases.
                 </p>
               </div>
             </div>
@@ -856,25 +856,25 @@ export default function Home() {
                   What makes M22 different from other agencies?
                 </h3>
                 <p className="text-gray-500">
-                  Our 18+ years of digital transformation experience, combined with our ROI-focused methodology and deep AI expertise, allows us to deliver solutions that drive measurable business impact. We're partners in your success, not just service providers.
+                  Our 18+ years of digital transformation experience, combined with our ROI-focused methodology and business case-driven approach, ensures every project delivers measurable impact. We're partners in your success, not just service providers.
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="font-display text-lg font-bold mb-2">
-                  Do you provide ongoing support?
+                  How do you ensure project success?
                 </h3>
                 <p className="text-gray-500">
-                  Yes, we offer flexible support options post-implementation. From regular optimization reviews to continuous improvement programs, we ensure your digital solutions evolve with your business needs.
+                  Success starts with a solid business case. We establish clear KPIs tied to your business objectives, track progress throughout the engagement, and regularly measure against the baseline metrics established in our initial analysis.
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="font-display text-lg font-bold mb-2">
-                  What industries do you work with?
+                  What happens after the initial business case analysis?
                 </h3>
                 <p className="text-gray-500">
-                  We've successfully delivered projects across 25+ industries, including finance, healthcare, retail, and manufacturing. Our diverse experience allows us to bring cross-industry insights to your specific challenges.
+                  Once we've established a clear business case and ROI projections, we move into solution design and implementation. We continue to track against the established metrics and adjust our approach to ensure we meet or exceed the projected outcomes.
                 </p>
               </div>
             </div>
@@ -882,7 +882,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <Button asChild>
-              <a href="#contact">Still have questions? Let's talk</a>
+              <a href="#contact">Ready to build your business case? Let's talk</a>
             </Button>
           </div>
         </div>
