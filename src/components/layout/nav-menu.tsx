@@ -25,13 +25,6 @@ export function NavMenu({ className }: NavMenuProps) {
     [0, 100],
     ["0 4px 6px rgba(0, 0, 0, 0)", "0 4px 10px rgba(0, 0, 0, 0.1)"]
   )
-
-  // Border glow intensity based on scroll
-  const borderGlowOpacity = useTransform(
-    scrollY,
-    [0, 100],
-    [1, 0.7]
-  )
   
   // Check if scrolled for class changes
   React.useEffect(() => {
@@ -53,48 +46,65 @@ export function NavMenu({ className }: NavMenuProps) {
   
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
+      {/* Add keyframes for the animation */}
+      <style jsx global>{`
+        @keyframes rotate {
+          0% {
+            --angle: 0deg;
+          }
+          100% {
+            --angle: 360deg;
+          }
+        }
+
+        @property --angle {
+          syntax: '<angle>';
+          initial-value: 0deg;
+          inherits: false;
+        }
+
+        .animated-border {
+          position: relative;
+          z-index: 0;
+        }
+
+        .animated-border::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          inset: -2px;
+          border-radius: 9999px;
+          background: conic-gradient(
+            from var(--angle),
+            #6366f1,
+            #a855f7,
+            #ec4899,
+            #6366f1
+          );
+          animation: rotate 10s linear infinite;
+        }
+
+        .animated-border::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+          border-radius: 9999px;
+          background: inherit;
+        }
+      `}</style>
+      
       <motion.nav
         className={cn(
-          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300",
+          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 animated-border",
           isScrolled ? "backdrop-blur-md" : "backdrop-blur-sm",
           className
         )}
         style={{
           backgroundColor,
           boxShadow,
-          border: "1px solid transparent",
-          backgroundClip: "padding-box",
-          WebkitBackgroundClip: "padding-box",
-          position: "relative",
         }}
       >
-        {/* Fine line glow border with animation */}
-        <motion.div 
-          className="absolute inset-0 rounded-full -z-10 border-glow-animation"
-          style={{
-            background: "linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #6366f1)",
-            backgroundSize: "300% 100%",
-            padding: "1px",
-            opacity: borderGlowOpacity,
-            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-            WebkitMaskComposite: "xor",
-            maskComposite: "exclude",
-            animation: "rotate-gradient 10s linear infinite",
-          }}
-        />
-        
-        {/* Add keyframes for the animation */}
-        <style jsx global>{`
-          @keyframes rotate-gradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            100% {
-              background-position: 300% 50%;
-            }
-          }
-        `}</style>
-        
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="text-slate-900 w-8 h-8">
