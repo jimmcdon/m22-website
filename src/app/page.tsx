@@ -134,6 +134,118 @@ export default function Home() {
           {/* Journey map visualization will go here */}
         </div>
       </section>
+
+      {/* How We Work Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4">
+              Choose your path to innovation
+            </h2>
+            <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
+              Three flexible ways to leverage our expertise and AI capabilities
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {/* We Do It For You */}
+            <div className="flex flex-col p-8 bg-slate-50 rounded-lg">
+              <div className="mb-4">
+                <span className="inline-block px-4 py-2 bg-slate-200 rounded-full text-sm font-medium text-slate-700">
+                  Full Service
+                </span>
+              </div>
+              <h3 className="font-display text-xl font-bold mb-4">We Do It For You</h3>
+              <p className="text-gray-500 mb-6">
+                Our team handles everything from strategy to implementation, combining our expertise with AI tools to deliver complete solutions.
+              </p>
+              <ul className="space-y-3 text-gray-500 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>End-to-end project management</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Custom AI solution development</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Ongoing optimization & support</span>
+                </li>
+              </ul>
+              <div className="mt-auto">
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="#contact">Learn More</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* We Do It With You */}
+            <div className="flex flex-col p-8 bg-slate-900 rounded-lg text-white">
+              <div className="mb-4">
+                <span className="inline-block px-4 py-2 bg-slate-800 rounded-full text-sm font-medium text-slate-200">
+                  Collaborative
+                </span>
+              </div>
+              <h3 className="font-display text-xl font-bold mb-4">We Do It With You</h3>
+              <p className="text-slate-300 mb-6">
+                Partner with our team to augment your capabilities, transfer knowledge, and accelerate your AI transformation.
+              </p>
+              <ul className="space-y-3 text-slate-300 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Hands-on training & workshops</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Co-development of solutions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Knowledge transfer focus</span>
+                </li>
+              </ul>
+              <div className="mt-auto">
+                <Button className="w-full" asChild>
+                  <a href="#contact">Learn More</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Strategic Partnership */}
+            <div className="flex flex-col p-8 bg-slate-50 rounded-lg">
+              <div className="mb-4">
+                <span className="inline-block px-4 py-2 bg-slate-200 rounded-full text-sm font-medium text-slate-700">
+                  Long-term
+                </span>
+              </div>
+              <h3 className="font-display text-xl font-bold mb-4">Strategic Partnership</h3>
+              <p className="text-gray-500 mb-6">
+                Long-term collaboration to guide your organization's AI journey with strategic planning and ongoing support.
+              </p>
+              <ul className="space-y-3 text-gray-500 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Strategic roadmap development</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Regular strategy sessions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Priority access to new AI tools</span>
+                </li>
+              </ul>
+              <div className="mt-auto">
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="#contact">Learn More</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
