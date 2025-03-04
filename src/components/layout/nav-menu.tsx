@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 interface NavMenuProps {
   className?: string
@@ -46,57 +47,9 @@ export function NavMenu({ className }: NavMenuProps) {
   
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
-      {/* Add keyframes for the animation */}
-      <style jsx global>{`
-        @keyframes rotate {
-          0% {
-            --angle: 0deg;
-          }
-          100% {
-            --angle: 360deg;
-          }
-        }
-
-        @property --angle {
-          syntax: '<angle>';
-          initial-value: 0deg;
-          inherits: false;
-        }
-
-        .animated-border {
-          position: relative;
-          z-index: 0;
-        }
-
-        .animated-border::before {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          inset: -2px;
-          border-radius: 9999px;
-          background: conic-gradient(
-            from var(--angle),
-            #6366f1,
-            #a855f7,
-            #ec4899,
-            #6366f1
-          );
-          animation: rotate 10s linear infinite;
-        }
-
-        .animated-border::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          inset: 0;
-          border-radius: 9999px;
-          background: inherit;
-        }
-      `}</style>
-      
       <motion.nav
         className={cn(
-          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 animated-border",
+          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300",
           isScrolled ? "backdrop-blur-md" : "backdrop-blur-sm",
           className
         )}
@@ -105,6 +58,17 @@ export function NavMenu({ className }: NavMenuProps) {
           boxShadow,
         }}
       >
+        <GlowingEffect 
+          blur={15}
+          borderWidth={2}
+          spread={80}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          color="linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #6366f1)"
+        />
+        
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="text-slate-900 w-8 h-8">
