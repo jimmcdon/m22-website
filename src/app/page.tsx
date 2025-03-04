@@ -808,6 +808,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
+              Common questions about digital transformation and AI implementation
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  How long does a typical digital transformation take?
+                </h3>
+                <p className="text-gray-500">
+                  While every project is unique, most transformations take 4-6 months from strategy to implementation. We break this into manageable phases and deliver value incrementally, so you'll see results throughout the journey.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  What's your approach to AI implementation?
+                </h3>
+                <p className="text-gray-500">
+                  We believe in responsible AI integration that enhances rather than replaces human capabilities. Our approach starts with identifying high-impact, low-risk opportunities and gradually expanding based on proven success.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  How do you measure success?
+                </h3>
+                <p className="text-gray-500">
+                  We establish clear KPIs at the start of each project, tied directly to your business objectives. Whether it's increased revenue, reduced costs, or improved efficiency, we track and report progress throughout the engagement.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  What makes M22 different from other agencies?
+                </h3>
+                <p className="text-gray-500">
+                  Our 18+ years of digital transformation experience, combined with our ROI-focused methodology and deep AI expertise, allows us to deliver solutions that drive measurable business impact. We're partners in your success, not just service providers.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  Do you provide ongoing support?
+                </h3>
+                <p className="text-gray-500">
+                  Yes, we offer flexible support options post-implementation. From regular optimization reviews to continuous improvement programs, we ensure your digital solutions evolve with your business needs.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-display text-lg font-bold mb-2">
+                  What industries do you work with?
+                </h3>
+                <p className="text-gray-500">
+                  We've successfully delivered projects across 25+ industries, including finance, healthcare, retail, and manufacturing. Our diverse experience allows us to bring cross-industry insights to your specific challenges.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button asChild>
+              <a href="#contact">Still have questions? Let's talk</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
         <div className="container px-4 md:px-6 mx-auto">
