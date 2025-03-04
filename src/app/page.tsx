@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { ZenHero } from "@/components/blocks/zen-hero";
+import { FeatureCard } from "@/components/blocks/feature-card";
+import { Sparkles } from "@/components/ui/sparkles";
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
@@ -21,7 +23,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-slate-50">
       {/* Hero Section */}
       <ZenHero
-        title="Human expertise meets AI innovation"
+        title={
+          <Sparkles background={true} backgroundColors={["#94a3b8", "#64748b", "#475569"]} speed={0.5}>
+            Human expertise meets AI innovation
+          </Sparkles>
+        }
         subtitle="Helping businesses like yours create better digital experiences that your customers will love and your team can actually use"
         actions={[
           {
@@ -49,24 +55,21 @@ export default function Home() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-8">
-              <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Making Tech Work</h3>
-                <p className="text-slate-600 text-center">
-                  Want to use new tools like AI but not sure how to make them practical for your business?
-                </p>
-              </div>
-              <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Customer Experience</h3>
-                <p className="text-slate-600 text-center">
-                  Need to make your digital experience more personal and engaging for your customers?
-                </p>
-              </div>
-              <div className="flex flex-col items-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">Real Results</h3>
-                <p className="text-slate-600 text-center">
-                  Looking for practical ways to measure and improve the impact of your digital investments?
-                </p>
-              </div>
+              <FeatureCard 
+                title="Making Tech Work"
+                description="Want to use new tools like AI but not sure how to make them practical for your business?"
+                className="h-full"
+              />
+              <FeatureCard 
+                title="Customer Experience"
+                description="Need to make your digital experience more personal and engaging for your customers?"
+                className="h-full"
+              />
+              <FeatureCard 
+                title="Real Results"
+                description="Looking for practical ways to measure and improve the impact of your digital investments?"
+                className="h-full"
+              />
             </div>
           </div>
         </div>

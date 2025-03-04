@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-interface HeroProps extends React.HTMLAttributes<HTMLElement> {
-  title: string
+type HeroProps = Omit<React.HTMLAttributes<HTMLElement>, 'title'> & {
+  title: React.ReactNode
   subtitle?: string
   actions?: {
     label: string
