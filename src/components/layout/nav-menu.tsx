@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Sparkles } from "@/components/ui/sparkles"
 
 interface NavMenuProps {
   className?: string
@@ -27,11 +26,11 @@ export function NavMenu({ className }: NavMenuProps) {
     ["0 4px 6px rgba(0, 0, 0, 0)", "0 4px 10px rgba(0, 0, 0, 0.1)"]
   )
 
-  // Glow effect transform - increased opacity
-  const glowOpacity = useTransform(
+  // Border glow intensity based on scroll
+  const borderGlowOpacity = useTransform(
     scrollY,
     [0, 100],
-    [0.9, 0.6]
+    [1, 0.7]
   )
   
   // Check if scrolled for class changes
@@ -54,49 +53,34 @@ export function NavMenu({ className }: NavMenuProps) {
   
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
-      {/* Glow effect behind navbar - enhanced with stronger colors and larger blur */}
-      <motion.div 
-        className="absolute inset-0 rounded-full blur-lg"
-        style={{ 
-          background: "linear-gradient(90deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5))",
-          opacity: glowOpacity,
-          transform: "scale(1.05)",
-        }}
-      />
-      
-      {/* Additional inner glow for more intensity */}
-      <motion.div 
-        className="absolute inset-0 rounded-full blur-md"
-        style={{ 
-          background: "linear-gradient(45deg, rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.4))",
-          opacity: glowOpacity,
-          transform: "scale(1.02)",
-        }}
-      />
-      
-      <Sparkles 
-        background={true}
-        backgroundColors={["#6366f1", "#a855f7", "#ec4899", "#8b5cf6", "#d946ef"]}
-        minSize={3}
-        maxSize={6}
-        quantity={20}
-        speed={0.4}
-        className="absolute inset-0 rounded-full overflow-hidden"
-      >
-        <div className="w-full h-full" />
-      </Sparkles>
-      
       <motion.nav
         className={cn(
-          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 border border-transparent",
+          "relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300",
           isScrolled ? "backdrop-blur-md" : "backdrop-blur-sm",
           className
         )}
         style={{
           backgroundColor,
           boxShadow,
+          border: "1px solid transparent",
+          backgroundClip: "padding-box",
+          WebkitBackgroundClip: "padding-box",
+          position: "relative",
         }}
       >
+        {/* Fine line glow border */}
+        <motion.div 
+          className="absolute inset-0 rounded-full -z-10"
+          style={{
+            background: "linear-gradient(90deg, #6366f1, #a855f7, #ec4899)",
+            padding: "1px",
+            opacity: borderGlowOpacity,
+            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+          }}
+        />
+        
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="text-slate-900 w-8 h-8">
