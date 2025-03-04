@@ -26,10 +26,10 @@ export default function Home() {
               Human expertise meets AI innovation
             </h1>
             <p className="max-w-[700px] text-gray-500 md:text-xl">
-              M22 combines strategic thinking with AI capabilities to create digital experiences that deliver real value
+              Helping businesses like yours create better digital experiences that your customers will love and your team can actually use
             </p>
             <Button size="lg" asChild>
-              <a href="#contact">Book a Free Strategy Call</a>
+              <a href="#contact">Let's Talk About Your Project</a>
             </Button>
           </div>
         </div>
@@ -42,29 +42,29 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center space-y-6 text-center">
             <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
-              Ready to bridge the gap between AI potential and business reality?
+              Feeling stuck with your digital experience?
             </h2>
             <p className="max-w-[700px] text-gray-500 md:text-xl">
-              In 2024, companies are racing to implement AI, but the path to measurable success remains unclear
+              You're not alone. Let's turn those digital challenges into opportunities your business can actually use
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mt-8">
               <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow">
-                <h3 className="font-display text-lg font-bold">The AI Puzzle</h3>
+                <h3 className="font-display text-lg font-bold">Making Tech Work</h3>
                 <p className="text-gray-500 text-center mt-2">
-                  You know AI could transform your business, but implementing it effectively feels like solving a complex puzzle
+                  Want to use new tools like AI but not sure how to make them practical for your business?
                 </p>
               </div>
               <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow">
-                <h3 className="font-display text-lg font-bold">Human Factor</h3>
+                <h3 className="font-display text-lg font-bold">Customer Experience</h3>
                 <p className="text-gray-500 text-center mt-2">
-                  Finding the right balance between AI automation and human touch points in your customer journey
+                  Need to make your digital experience more personal and engaging for your customers?
                 </p>
               </div>
               <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow">
-                <h3 className="font-display text-lg font-bold">ROI Uncertainty</h3>
+                <h3 className="font-display text-lg font-bold">Real Results</h3>
                 <p className="text-gray-500 text-center mt-2">
-                  Struggling to quantify the return on investment for AI initiatives while keeping costs manageable
+                  Looking for practical ways to measure and improve the impact of your digital investments?
                 </p>
               </div>
             </div>
@@ -78,33 +78,33 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col space-y-4">
               <h2 className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
-                Where human insight meets AI precision
+                Simple solutions to complex digital challenges
               </h2>
               <p className="text-gray-500 md:text-lg">
-                Our North Star methodology combines decades of digital expertise with cutting-edge AI capabilities. We don't just implement technology – we create thoughtful, strategic solutions that consider both human needs and business objectives.
+                We bring 18+ years of experience making digital technology work for businesses like yours. Our approach combines practical solutions with the latest tools, always focusing on what actually works for your team and customers.
               </p>
               <ul className="space-y-3 text-gray-500">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  Strategic assessment of where AI can truly add value</li>
+                  Focus on practical solutions that your team can actually use</li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  Human-centered design enhanced by AI capabilities</li>
+                  Make customer experiences more personal and engaging</li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  Clear metrics and ROI tracking from day one</li>
+                  Measure what matters to show real business impact</li>
               </ul>
             </div>
             <div className="bg-slate-100 p-8 rounded-lg">
-              <h3 className="font-display text-xl font-bold mb-4">Our Proven Process</h3>
+              <h3 className="font-display text-xl font-bold mb-4">How We Work</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-8 w-8 flex items-center justify-center rounded-full bg-slate-200 text-slate-600 font-bold">
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-bold">Discovery & Strategy</h4>
-                    <p className="text-gray-500">Map your current processes and identify AI opportunities</p>
+                    <h4 className="font-bold">Listen & Understand</h4>
+                    <p className="text-gray-500">Get to know your business, team, and customers</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -112,8 +112,8 @@ export default function Home() {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-bold">Design & Development</h4>
-                    <p className="text-gray-500">Create human-centered solutions powered by AI</p>
+                    <h4 className="font-bold">Design & Build</h4>
+                    <p className="text-gray-500">Create solutions that are simple to use and maintain</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -121,8 +121,8 @@ export default function Home() {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-bold">Implementation & Optimization</h4>
-                    <p className="text-gray-500">Launch, measure, and continuously improve</p>
+                    <h4 className="font-bold">Test & Improve</h4>
+                    <p className="text-gray-500">Make sure everything works and keeps getting better</p>
                   </div>
                 </div>
               </div>
@@ -968,10 +968,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-slate-300 md:text-lg">
-                M22 designs digital experiences that deliver measurable business results.
+                M22 creates digital experiences that work for real people and real businesses.
               </p>
               <p className="text-sm text-slate-400 mt-4">
-                © 2024 M22 Digital Transformation Agency
+                © 2024 M22
               </p>
             </div>
           </div>
