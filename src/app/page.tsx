@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
+import { Hero } from "@/components/blocks/hero";
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
@@ -19,21 +20,20 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-slate-50">
       {/* Hero Section */}
-      <section className="w-full py-24 md:py-32 lg:py-40 bg-white border-b border-slate-200">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center space-y-8 text-center">
-            <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-slate-900">
-              Human expertise meets<br />AI innovation
-            </h1>
-            <p className="max-w-[700px] text-slate-600 text-lg md:text-xl leading-relaxed">
-              Helping businesses like yours create better digital experiences that your customers will love and your team can actually use
-            </p>
-            <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white px-8" asChild>
-              <a href="#contact">Let's Talk About Your Project</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Human expertise meets AI innovation"
+        subtitle="Helping businesses like yours create better digital experiences that your customers will love and your team can actually use"
+        actions={[
+          {
+            label: "Let's Talk About Your Project",
+            href: "#contact",
+            variant: "default"
+          }
+        ]}
+        className="bg-white border-b border-slate-200"
+        titleClassName="text-slate-900"
+        subtitleClassName="text-slate-600 max-w-[700px]"
+      />
       
       <Separator className="bg-slate-200" />
       
