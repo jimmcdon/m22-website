@@ -52,8 +52,8 @@ export const Sparkles = ({
       size,
       color: randomColor(),
       position: {
-        x: random(0, rect.width - size),
-        y: random(0, rect.height - size),
+        x: random(0, Math.max(1, rect.width - size)),
+        y: random(0, Math.max(1, rect.height - size)),
       },
       createdAt: Date.now(),
     };
@@ -67,15 +67,19 @@ export const Sparkles = ({
   };
 
   useEffect(() => {
-    createSparkles();
-    
-    if (background) {
-      timeoutRef.current = setInterval(() => {
-        createSparkles();
-      }, 2000 / speed);
-    }
+    // Delay the initial sparkles to ensure the container is properly sized
+    const timer = setTimeout(() => {
+      createSparkles();
+      
+      if (background) {
+        timeoutRef.current = setInterval(() => {
+          createSparkles();
+        }, 2000 / speed);
+      }
+    }, 100);
     
     return () => {
+      clearTimeout(timer);
       if (timeoutRef.current) {
         clearInterval(timeoutRef.current);
       }
@@ -96,9 +100,10 @@ export const Sparkles = ({
                 backgroundColor: sparkle.color,
                 top: sparkle.position.y,
                 left: sparkle.position.x,
+                boxShadow: `0 0 ${sparkle.size / 2}px ${sparkle.color}`,
               }}
               initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.7 }}
+              animate={{ scale: 1, opacity: 0.9 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 1 / speed }}
             />

@@ -18,7 +18,7 @@ export function NavMenu({ className }: NavMenuProps) {
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.95)"]
+    ["rgba(255, 255, 255, 0.85)", "rgba(255, 255, 255, 0.95)"]
   )
   
   const boxShadow = useTransform(
@@ -27,11 +27,11 @@ export function NavMenu({ className }: NavMenuProps) {
     ["0 4px 6px rgba(0, 0, 0, 0)", "0 4px 10px rgba(0, 0, 0, 0.1)"]
   )
 
-  // Glow effect transform
+  // Glow effect transform - increased opacity
   const glowOpacity = useTransform(
     scrollY,
     [0, 100],
-    [0.6, 0.3]
+    [0.9, 0.6]
   )
   
   // Check if scrolled for class changes
@@ -54,11 +54,21 @@ export function NavMenu({ className }: NavMenuProps) {
   
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1200px]" style={{ width: isScrolled ? "90%" : "80%" }}>
-      {/* Glow effect behind navbar */}
+      {/* Glow effect behind navbar - enhanced with stronger colors and larger blur */}
+      <motion.div 
+        className="absolute inset-0 rounded-full blur-lg"
+        style={{ 
+          background: "linear-gradient(90deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5))",
+          opacity: glowOpacity,
+          transform: "scale(1.05)",
+        }}
+      />
+      
+      {/* Additional inner glow for more intensity */}
       <motion.div 
         className="absolute inset-0 rounded-full blur-md"
         style={{ 
-          background: "linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2))",
+          background: "linear-gradient(45deg, rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.4))",
           opacity: glowOpacity,
           transform: "scale(1.02)",
         }}
@@ -66,11 +76,11 @@ export function NavMenu({ className }: NavMenuProps) {
       
       <Sparkles 
         background={true}
-        backgroundColors={["#6366f1", "#a855f7", "#ec4899"]}
-        minSize={2}
-        maxSize={4}
-        quantity={10}
-        speed={0.3}
+        backgroundColors={["#6366f1", "#a855f7", "#ec4899", "#8b5cf6", "#d946ef"]}
+        minSize={3}
+        maxSize={6}
+        quantity={20}
+        speed={0.4}
         className="absolute inset-0 rounded-full overflow-hidden"
       >
         <div className="w-full h-full" />
