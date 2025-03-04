@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 interface NavMenuProps {
   className?: string
@@ -13,19 +12,6 @@ interface NavMenuProps {
 export function NavMenu({ className }: NavMenuProps) {
   const { scrollY } = useScroll()
   const [isScrolled, setIsScrolled] = React.useState(false)
-  
-  // Transform values for animation
-  const backgroundColor = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0.5)", "rgba(255, 255, 255, 0.7)"]
-  )
-  
-  const boxShadow = useTransform(
-    scrollY,
-    [0, 100],
-    ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
-  )
   
   // Check if scrolled for class changes
   React.useEffect(() => {
@@ -61,38 +47,11 @@ export function NavMenu({ className }: NavMenuProps) {
       >
         {/* Background container with blur */}
         <div 
-          className="absolute inset-0 rounded-full overflow-hidden"
+          className="absolute inset-0 rounded-full overflow-hidden bg-white/50 backdrop-blur-sm"
           style={{
-            background: useTransform(
-              scrollY,
-              [0, 0.1],
-              ["rgba(255, 255, 255, 0.3)", "rgba(255, 255, 255, 0.5)"]
-            ).get(),
-            boxShadow: useTransform(
-              scrollY,
-              [0, 0.1],
-              ["none", "0 4px 10px rgba(0, 0, 0, 0.1)"]
-            ).get(),
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)"
           }}
-        >
-          <div 
-            className={cn(
-              "absolute inset-0 transition-all duration-200",
-              isScrolled ? "backdrop-blur-[2px]" : "backdrop-blur-none"
-            )} 
-          />
-        </div>
-
-        {/* Glow Effect Container - Now outside the background container */}
-        <div className="absolute inset-0 rounded-full">
-          <GlowingEffect
-            blur={12}
-            borderWidth={2}
-            spread={24}
-            color="linear-gradient(90deg, rgb(99, 102, 241), rgb(168, 85, 247), rgb(236, 73, 153), rgb(244, 63, 94), rgb(99, 102, 241))"
-            animated={true}
-          />
-        </div>
+        />
 
         {/* Main content container */}
         <div className="relative z-20 flex w-full items-center justify-between">
