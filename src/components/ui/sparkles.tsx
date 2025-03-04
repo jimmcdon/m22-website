@@ -27,12 +27,19 @@ export const Sparkles = ({
   quantity = 20,
   speed = 1,
 }: SparklesProps) => {
-  const [sparkles, setSparkles] = useState<Array<{ id: number; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>>([]);
+  const [sparkles, setSparkles] = useState<Array<{ id: string; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>>([]);
   const sparklesRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const sparkleIdCounterRef = useRef(0);
 
   const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
   const randomColor = () => backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+
+  // Generate a unique ID for each sparkle
+  const generateUniqueId = () => {
+    sparkleIdCounterRef.current += 1;
+    return `sparkle-${Date.now()}-${sparkleIdCounterRef.current}-${Math.random().toString(36).substr(2, 9)}`;
+  };
 
   const createSparkle = () => {
     if (!sparklesRef.current) return null;
@@ -41,7 +48,7 @@ export const Sparkles = ({
     const size = random(minSize, maxSize);
     
     return {
-      id: Date.now(),
+      id: generateUniqueId(),
       size,
       color: randomColor(),
       position: {
@@ -55,7 +62,7 @@ export const Sparkles = ({
   const createSparkles = () => {
     if (!sparklesRef.current) return;
     
-    const newSparkles = Array.from({ length: quantity }, () => createSparkle()).filter(Boolean) as Array<{ id: number; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>;
+    const newSparkles = Array.from({ length: quantity }, () => createSparkle()).filter(Boolean) as Array<{ id: string; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>;
     setSparkles(newSparkles);
   };
 
