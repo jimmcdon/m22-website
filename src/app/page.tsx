@@ -7,6 +7,7 @@ import { ZenHero } from "@/components/blocks/zen-hero";
 import { FeatureCard } from "@/components/blocks/feature-card";
 import { Sparkles } from "@/components/ui/sparkles";
 import { NavMenu } from "@/components/layout/nav-menu";
+import { Lightbulb, Rocket, Target, Brain, Heart, BarChart, Ear, PenTool, TestTube, Trophy, Clock, Building2, LineChart, Users, Zap, Database, Laptop, Shield } from "lucide-react"
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
@@ -43,89 +44,148 @@ export default function Home() {
       
       <Separator className="bg-slate-200" />
       
-      {/* Does This Sound Familiar Section */}
-      <section id="services" className="w-full py-24 md:py-32 bg-white">
+      {/* Services Section */}
+      <section id="services" className="w-full py-24 md:py-32 bg-white border-b border-slate-100">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center space-y-8 text-center">
-            <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <h2 className="text-3xl font-display font-medium tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Feeling stuck with your digital experience?
             </h2>
-            <p className="max-w-[700px] text-slate-600 text-lg md:text-xl leading-relaxed">
-              You're not alone. Let's turn those digital challenges into opportunities your business can actually use
+            <p className="max-w-[600px] text-slate-600 text-lg md:text-xl">
+              You're not alone. Let's turn those digital challenges into opportunities.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-8">
-              <FeatureCard 
-                title="Making Tech Work"
-                description="Want to use new tools like AI but not sure how to make them practical for your business?"
-                className="h-full"
-              />
-              <FeatureCard 
-                title="Customer Experience"
-                description="Need to make your digital experience more personal and engaging for your customers?"
-                className="h-full"
-              />
-              <FeatureCard 
-                title="Real Results"
-                description="Looking for practical ways to measure and improve the impact of your digital investments?"
-                className="h-full"
-              />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+            <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+              <div className="mb-5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                  <Lightbulb className="h-6 w-6" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="mb-2 font-display text-xl font-medium">Making Tech Work</h3>
+              <p className="mb-8 text-slate-600">Want to use new tools like AI but not sure how to make them practical for your business?</p>
+              <a href="#contact" className="text-sm font-medium text-slate-900 hover:text-slate-700">
+                Learn more →
+              </a>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+              <div className="mb-5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                  <Target className="h-6 w-6" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="mb-2 font-display text-xl font-medium">Customer Experience</h3>
+              <p className="mb-8 text-slate-600">Need to make your digital experience more personal and engaging for your customers?</p>
+              <a href="#contact" className="text-sm font-medium text-slate-900 hover:text-slate-700">
+                Learn more →
+              </a>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+              <div className="mb-5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                  <BarChart className="h-6 w-6" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="mb-2 font-display text-xl font-medium">Real Results</h3>
+              <p className="mb-8 text-slate-600">Looking for practical ways to measure and improve the impact of your digital investments?</p>
+              <a href="#contact" className="text-sm font-medium text-slate-900 hover:text-slate-700">
+                Learn more →
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our North Star Approach */}
-      <section id="approach" className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
+      {/* Approach Section */}
+      <section id="approach" className="w-full py-24 md:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="flex flex-col space-y-6">
-              <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900">
-                Simple solutions to complex digital challenges
-              </h2>
-              <p className="text-slate-600 text-lg leading-relaxed">
-                We bring 18+ years of experience making digital technology work for businesses like yours. Our approach combines practical solutions with the latest tools, always focusing on what actually works for your team and customers.
-              </p>
-              <ul className="space-y-4 text-slate-600">
-                <li className="flex items-start">
-                  <span className="mr-3 text-slate-900">•</span>
-                  Focus on practical solutions that your team can actually use</li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-slate-900">•</span>
-                  Make customer experiences more personal and engaging</li>
-                <li className="flex items-start">
-                  <span className="mr-3 text-slate-900">•</span>
-                  Measure what matters to show real business impact</li>
-              </ul>
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="flex flex-col space-y-8">
+              <div>
+                <h2 className="text-3xl font-display font-medium tracking-tight sm:text-4xl md:text-5xl lg:text-6xl mb-6">
+                  Simple solutions to complex digital challenges
+                </h2>
+                <p className="text-lg text-slate-600">
+                  We bring 18+ years of experience making digital technology work for businesses like yours. Our approach combines practical solutions with the latest tools, always focusing on what actually works.
+                </p>
+              </div>
+
+              <div className="grid gap-6">
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Brain className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-medium">Practical Solutions</h3>
+                      <p className="mt-2 text-slate-600">Focus on solutions that your team can actually use and maintain</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Heart className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-medium">Personal Experience</h3>
+                      <p className="mt-2 text-slate-600">Make customer experiences more engaging and meaningful</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <BarChart className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-medium">Measurable Impact</h3>
+                      <p className="mt-2 text-slate-600">Track and improve the real business impact of every change</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
-              <h3 className="font-display text-2xl font-medium text-slate-900 mb-6">How We Work</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-900 font-semibold">
-                    1
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-slate-900">Listen & Understand</h4>
-                    <p className="text-slate-600 mt-1">Get to know your business, team, and customers</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-900 font-semibold">
-                    2
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-slate-900">Design & Build</h4>
-                    <p className="text-slate-600 mt-1">Create solutions that are simple to use and maintain</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-900 font-semibold">
-                    3
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-slate-900">Test & Improve</h4>
-                    <p className="text-slate-600 mt-1">Make sure everything works and keeps getting better</p>
+
+            <div className="relative">
+              <div className="sticky top-8 space-y-6">
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+                  <h3 className="font-display text-xl font-medium mb-6">How We Work</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                        <Ear className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-slate-900">Listen & Understand</h4>
+                        <p className="mt-2 text-slate-600">Get to know your business, team, and customers</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                        <PenTool className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-slate-900">Design & Build</h4>
+                        <p className="mt-2 text-slate-600">Create solutions that are simple to use and maintain</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                        <TestTube className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-slate-900">Test & Improve</h4>
+                        <p className="mt-2 text-slate-600">Make sure everything works and keeps getting better</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -325,7 +385,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Month 1
                       </div>
-                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Initial Assessment</h3>
+                      <h4 className="text-lg font-medium mb-2">Initial Assessment</h4>
                       <p className="text-gray-500">Comprehensive analysis of your current processes and AI opportunities</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -356,7 +416,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Months 2-3
                       </div>
-                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Solution Design</h3>
+                      <h4 className="text-lg font-medium mb-2">Solution Design</h4>
                       <p className="text-gray-500">Creating the perfect blend of human expertise and AI capabilities</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -387,7 +447,7 @@ export default function Home() {
                       <div className="inline-block px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium mb-2">
                         Months 4-6
                       </div>
-                      <h3 className="font-display text-xl font-normal text-slate-900 mb-2">Implementation</h3>
+                      <h4 className="text-lg font-medium mb-2">Implementation</h4>
                       <p className="text-gray-500">Carefully managed rollout with continuous monitoring and adjustment</p>
                     </div>
                     <div className="hidden md:block w-12 flex-shrink-0 relative">
@@ -543,116 +603,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expertise and Credibility Section */}
-      <section id="case-studies" className="w-full py-24 md:py-32 bg-white">
+      {/* Case Studies Section */}
+      <section id="case-studies" className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-100">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-2xl font-normal tracking-tighter sm:text-3xl md:text-4xl mb-4">
-              Nearly two decades of creating magical digital experiences
-            </h2>
-            <p className="max-w-[700px] mx-auto text-gray-500 md:text-lg">
-              Leading digital transformations across multiple technology waves, now pioneering AI integration
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Stats and Recognition */}
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-normal text-slate-900 mb-2">200+</div>
-                  <div className="text-gray-500">Digital Projects Delivered</div>
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Trophy className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div className="text-3xl font-medium text-slate-900">200+</div>
+                  </div>
+                  <div className="text-slate-600">Digital Projects Delivered</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-normal text-slate-900 mb-2">18+</div>
-                  <div className="text-gray-500">Years Experience</div>
+
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Clock className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div className="text-3xl font-medium text-slate-900">18+</div>
+                  </div>
+                  <div className="text-slate-600">Years Experience</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-normal text-slate-900 mb-2">25+</div>
-                  <div className="text-gray-500">Industries Served</div>
+
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Building2 className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div className="text-3xl font-medium text-slate-900">25+</div>
+                  </div>
+                  <div className="text-slate-600">Industries Served</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="text-3xl font-normal text-slate-900 mb-2">95%</div>
-                  <div className="text-gray-500">Client Satisfaction</div>
+
+                <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Users className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div className="text-3xl font-medium text-slate-900">95%</div>
+                  </div>
+                  <div className="text-slate-600">Client Satisfaction</div>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-normal mb-4">Technology Evolution</h3>
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+                <h3 className="font-display text-xl font-medium mb-6">Core Expertise</h3>
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-normal">Internet Boom Era</h4>
-                      <p className="text-gray-500">Built foundational digital experiences for early adopters</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-normal">Mobile Revolution</h4>
-                      <p className="text-gray-500">Transformed customer engagement through responsive design</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-normal">AI Wave</h4>
-                      <p className="text-gray-500">Creating intelligent, personalized experiences</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Expertise Areas */}
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-normal mb-6">Core Expertise</h3>
-                <div className="space-y-4">
                   <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium">Digital Strategy</span>
-                      <span className="text-sm font-medium">98%</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <Laptop className="h-5 w-5" strokeWidth={1.5} />
+                        <span className="font-medium text-slate-900">Digital Strategy</span>
+                      </div>
+                      <span className="font-medium text-slate-900">98%</span>
                     </div>
                     <div className="w-full bg-slate-100 rounded-full h-2">
                       <div className="bg-slate-900 h-2 rounded-full" style={{ width: "98%" }}></div>
                     </div>
                   </div>
+
                   <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium">User Experience Design</span>
-                      <span className="text-sm font-medium">96%</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <Users className="h-5 w-5" strokeWidth={1.5} />
+                        <span className="font-medium text-slate-900">User Experience Design</span>
+                      </div>
+                      <span className="font-medium text-slate-900">96%</span>
                     </div>
                     <div className="w-full bg-slate-100 rounded-full h-2">
                       <div className="bg-slate-900 h-2 rounded-full" style={{ width: "96%" }}></div>
                     </div>
                   </div>
+
                   <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium">Technical Architecture</span>
-                      <span className="text-sm font-medium">94%</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <Shield className="h-5 w-5" strokeWidth={1.5} />
+                        <span className="font-medium text-slate-900">Technical Architecture</span>
+                      </div>
+                      <span className="font-medium text-slate-900">94%</span>
                     </div>
                     <div className="w-full bg-slate-100 rounded-full h-2">
                       <div className="bg-slate-900 h-2 rounded-full" style={{ width: "94%" }}></div>
                     </div>
                   </div>
+
                   <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium">AI Integration</span>
-                      <span className="text-sm font-medium">92%</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <Brain className="h-5 w-5" strokeWidth={1.5} />
+                        <span className="font-medium text-slate-900">AI Integration</span>
+                      </div>
+                      <span className="font-medium text-slate-900">92%</span>
                     </div>
                     <div className="w-full bg-slate-100 rounded-full h-2">
                       <div className="bg-slate-900 h-2 rounded-full" style={{ width: "92%" }}></div>
@@ -660,22 +706,64 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-normal mb-4">Impact Focus</h3>
-                <p className="text-gray-500 mb-6">Throughout these waves, our focus has remained consistent: creating measurable business impact through exceptional digital experiences.</p>
+            <div className="space-y-8">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+                <h3 className="font-display text-xl font-medium mb-6">Latest Projects</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Brain className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-slate-900">AI-Powered Analytics Platform</h4>
+                      <p className="mt-1 text-sm text-slate-600">Increased customer insights by 300%</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Users className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-slate-900">Mobile Experience Redesign</h4>
+                      <p className="mt-1 text-sm text-slate-600">Improved conversion rate by 85%</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors group-hover:bg-slate-200">
+                      <Shield className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-slate-900">Digital Transformation Strategy</h4>
+                      <p className="mt-1 text-sm text-slate-600">40% reduction in operational costs</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <a href="#contact" className="text-sm font-medium text-slate-900 hover:text-slate-700">
+                    View all projects →
+                  </a>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 transition-all hover:border-slate-300">
+                <h3 className="font-display text-xl font-medium mb-6">Impact Focus</h3>
+                <p className="text-slate-600 mb-8">Throughout these waves, our focus has remained consistent: creating measurable business impact through exceptional digital experiences.</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
-                    <span className="text-slate-600 font-medium">ROI Driven</span>
+                  <div className="flex items-center justify-center p-4 rounded-lg bg-slate-50 text-slate-900 font-medium">
+                    ROI Driven
                   </div>
-                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
-                    <span className="text-slate-600 font-medium">User Centered</span>
+                  <div className="flex items-center justify-center p-4 rounded-lg bg-slate-50 text-slate-900 font-medium">
+                    User Centered
                   </div>
-                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
-                    <span className="text-slate-600 font-medium">Data Informed</span>
+                  <div className="flex items-center justify-center p-4 rounded-lg bg-slate-50 text-slate-900 font-medium">
+                    Data Informed
                   </div>
-                  <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
-                    <span className="text-slate-600 font-medium">Future Ready</span>
+                  <div className="flex items-center justify-center p-4 rounded-lg bg-slate-50 text-slate-900 font-medium">
+                    Future Ready
                   </div>
                 </div>
               </div>
@@ -781,30 +869,30 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="w-full py-24 md:py-32 bg-slate-50 border-y border-slate-200">
+      <section id="faq" className="w-full py-24 md:py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl text-slate-900 mb-6">
+          <div className="flex flex-col items-center space-y-4 text-center mb-16">
+            <h2 className="text-3xl font-display font-medium tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Frequently Asked Questions
             </h2>
-            <p className="max-w-[700px] mx-auto text-slate-600 text-lg leading-relaxed">
+            <p className="max-w-[600px] text-slate-600 text-lg md:text-xl">
               Common questions about our approach to digital transformation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <div className="space-y-6">
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   How do you start each engagement?
                 </h3>
                 <p className="text-slate-600">
-                  Every engagement begins with our proven business case analysis. We follow a structured approach to frame the financial story, identify primary business goals, calculate baselines, and project ROI. This ensures all stakeholders have clarity on expected outcomes before we begin. <a href="#business-case" className="text-slate-900 font-medium hover:underline">Learn more about our business case methodology</a>.
+                  Every engagement begins with our proven business case analysis. We follow a structured approach to frame the financial story, identify primary business goals, calculate baselines, and project ROI. This ensures all stakeholders have clarity on expected outcomes before we begin. <a href="#business-case" className="text-slate-900 hover:text-slate-700 font-medium">Learn more about our methodology →</a>
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   How long does a typical digital transformation take?
                 </h3>
                 <p className="text-slate-600">
@@ -812,37 +900,37 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   How do you approach AI implementation?
                 </h3>
                 <p className="text-slate-600">
-                  We start with your business case to identify where AI can deliver the most value. Rather than implementing technology for its own sake, we focus on practical applications that solve real problems. Our approach combines off-the-shelf solutions where appropriate and custom development where needed, always with a clear ROI target established in the business case.
+                  We start with your business case to identify where AI can deliver the most value. Rather than implementing technology for its own sake, we focus on practical applications that solve real problems. Our approach combines off-the-shelf solutions where appropriate and custom development where needed, always with a clear ROI target.
                 </p>
               </div>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   How do you measure success?
                 </h3>
                 <p className="text-slate-600">
-                  Success metrics are defined in the initial business case and tracked throughout the project. We establish clear KPIs tied to business outcomes—whether that's increased revenue, improved customer satisfaction, operational efficiency, or other metrics specific to your goals. We provide regular reporting on these metrics and adjust our approach as needed.
+                  Success metrics are defined in the initial business case and tracked throughout the project. We establish clear KPIs tied to business outcomes—whether that's increased revenue, improved customer satisfaction, operational efficiency, or other metrics specific to your goals. We provide regular reporting on these metrics.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   What makes M22 different from other agencies?
                 </h3>
                 <p className="text-slate-600">
-                  Our business case-driven approach sets us apart. We don't just build what you ask for—we help you define what will actually move the needle for your business. Our team combines deep technical expertise with business acumen, ensuring that every solution we deliver is both technically sound and aligned with your strategic objectives.
+                  Our business case-driven approach sets us apart. We don't just build what you ask for—we help you define what will actually move the needle for your business. Our team combines deep technical expertise with business acumen, ensuring that every solution we deliver is both technically sound and aligned with your objectives.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-display text-xl font-medium text-slate-900 mb-4">
+              <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-6 transition-all hover:border-slate-300">
+                <h3 className="font-display text-lg font-medium text-slate-900 mb-3">
                   Do you provide ongoing support?
                 </h3>
                 <p className="text-slate-600">
@@ -852,10 +940,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8" asChild>
-              <a href="#contact">Ready to build your business case? Let's talk</a>
-            </Button>
+          <div className="flex justify-center mt-12">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-900 transition-all hover:border-slate-300 hover:bg-slate-50"
+            >
+              Ready to build your business case? Let's talk →
+            </a>
           </div>
         </div>
       </section>
@@ -878,7 +969,7 @@ export default function Home() {
               <div className="space-y-4 mt-4">
                 <div className="flex items-center">
                   <svg className="w-6 h-6 text-slate-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <span className="text-slate-300">hello@m22.com</span>
                 </div>
