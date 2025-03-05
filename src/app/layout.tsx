@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Header } from "@/components/ui/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -49,9 +48,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.remove('dark')
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${quicksand.variable} antialiased`}>
         <ThemeProvider>
-          <Header />
           {children}
         </ThemeProvider>
       </body>
