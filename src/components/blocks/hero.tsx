@@ -6,6 +6,22 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
+interface HeroProps {
+  className?: string
+  gradient?: boolean
+  blur?: boolean
+  title: React.ReactNode
+  subtitle?: React.ReactNode
+  actions?: Array<{
+    label: string
+    href: string
+    variant?: "default" | "secondary" | "ghost" | "link"
+  }>
+  titleClassName?: string
+  subtitleClassName?: string
+  actionsClassName?: string
+}
+
 const Hero = React.forwardRef<HTMLElement, HeroProps>(
   (
     {

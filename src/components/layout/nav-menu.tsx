@@ -3,14 +3,14 @@
 import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { motion, useScroll } from "framer-motion"
+import { motion } from "framer-motion"
 
 interface NavMenuProps {
   className?: string
+  onContactClick?: () => void
 }
 
-export function NavMenu({ className }: NavMenuProps) {
-  const { scrollY } = useScroll()
+export function NavMenu({ onContactClick }: NavMenuProps) {
   const [isScrolled, setIsScrolled] = React.useState(false)
   
   // Check if scrolled for class changes
@@ -28,7 +28,7 @@ export function NavMenu({ className }: NavMenuProps) {
     { name: "Approach", href: "#approach" },
     { name: "Case Studies", href: "#case-studies" },
     { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", onClick: onContactClick },
   ]
   
   return (
@@ -66,15 +66,27 @@ export function NavMenu({ className }: NavMenuProps) {
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-full transition-colors hover:bg-white/50"
-              >
-                {item.name}
-              </Link>
-            ))}
+            <ul className="flex items-center gap-1 list-none">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  {item.onClick ? (
+                    <button
+                      onClick={item.onClick}
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-full transition-colors hover:bg-white/50"
+                    >
+                      {item.name}
+                    </button>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-full transition-colors hover:bg-white/50"
+                    >
+                      {item.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
           
           <div className="md:hidden">

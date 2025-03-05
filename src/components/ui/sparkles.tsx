@@ -29,11 +29,8 @@ export const Sparkles = ({
 }: SparklesProps) => {
   const [sparkles, setSparkles] = useState<Array<{ id: string; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>>([]);
   const sparklesRef = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const sparkleIdCounterRef = useRef(0);
-
   const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
-  const randomColor = () => backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
 
   // Generate a unique ID for each sparkle
   const generateUniqueId = () => {
@@ -41,50 +38,46 @@ export const Sparkles = ({
     return `sparkle-${Date.now()}-${sparkleIdCounterRef.current}-${Math.random().toString(36).substr(2, 9)}`;
   };
 
-  const createSparkle = () => {
-    if (!sparklesRef.current) return null;
-    
-    const rect = sparklesRef.current.getBoundingClientRect();
-    const size = random(minSize, maxSize);
-    
-    return {
-      id: generateUniqueId(),
-      size,
-      color: randomColor(),
-      position: {
-        x: random(0, Math.max(1, rect.width - size)),
-        y: random(0, Math.max(1, rect.height - size)),
-      },
-      createdAt: Date.now(),
-    };
-  };
-
-  const createSparkles = () => {
-    if (!sparklesRef.current) return;
-    
-    const newSparkles = Array.from({ length: quantity }, () => createSparkle()).filter(Boolean) as Array<{ id: string; size: number; color: string; position: { x: number; y: number; }; createdAt: number; }>;
-    setSparkles(newSparkles);
-  };
-
   useEffect(() => {
-    // Delay the initial sparkles to ensure the container is properly sized
-    const timer = setTimeout(() => {
-      createSparkles();
-      
-      if (background) {
-        timeoutRef.current = setInterval(() => {
-          createSparkles();
-        }, 2000 / speed);
-      }
-    }, 100);
+    const randomColor = () => backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
     
-    return () => {
-      clearTimeout(timer);
-      if (timeoutRef.current) {
-        clearInterval(timeoutRef.current);
-      }
+    const createSparkle = (): { id: string; size: number; color: string; position: { x: number; y: number; }; createdAt: number; } => {
+      if (!sparklesRef.current) return { id: "", size: 0, color: "", position: { x: 0, y: 0 }, createdAt: 0 };
+      
+      const rect = sparklesRef.current.getBoundingClientRect();
+      const size = random(minSize, maxSize);
+      
+      return {
+        id: generateUniqueId(),
+        size,
+        color: randomColor(),
+        position: {
+          x: random(0, Math.max(1, rect.width - size)),
+          y: random(0, Math.max(1, rect.height - size)),
+        },
+        createdAt: Date.now(),
+      };
     };
-  }, []);
+
+    const createSparkles = () => {
+      const newSparkles = [];
+      for (let i = 0; i < quantity; i++) {
+        newSparkles.push(createSparkle());
+      }
+      setSparkles(newSparkles);
+    };
+
+    // Initial sparkles with delay to ensure container is sized
+    const initialTimer = setTimeout(createSparkles, 100);
+
+    // Create new sparkles periodically if background mode is enabled
+    const intervalTimer = background ? setInterval(createSparkles, 2000 / speed) : null;
+
+    return () => {
+      clearTimeout(initialTimer);
+      if (intervalTimer) clearInterval(intervalTimer);
+    };
+  }, [background, speed, quantity, minSize, maxSize, backgroundColors]);
 
   return (
     <div className={cn("relative", className)} id={id} ref={sparklesRef}>

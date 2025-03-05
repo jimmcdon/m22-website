@@ -1,17 +1,18 @@
 "use client";
 
+import * as React from "react";
+import { NavMenu } from "@/components/layout/nav-menu";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
+import { Lightbulb, Target, Brain, Heart, BarChart, Ear, PenTool, TestTube, Trophy, Clock, Building2, Users, Laptop, Shield } from "lucide-react";
+import { WaitlistModal } from "@/components/ui/waitlist-modal";
 import { ZenHero } from "@/components/blocks/zen-hero";
-import { FeatureCard } from "@/components/blocks/feature-card";
-import { Sparkles } from "@/components/ui/sparkles";
-import { NavMenu } from "@/components/layout/nav-menu";
-import { Lightbulb, Rocket, Target, Brain, Heart, BarChart, Ear, PenTool, TestTube, Trophy, Clock, Building2, LineChart, Users, Zap, Database, Laptop, Shield } from "lucide-react"
+import { useState } from "react";
 
 export default function Home() {
   const [activeVersion, setActiveVersion] = useState(0);
   const totalVersions = 3;
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
 
   const nextVersion = () => {
     setActiveVersion((prev) => (prev + 1) % totalVersions);
@@ -21,10 +22,13 @@ export default function Home() {
     setActiveVersion((prev) => (prev - 1 + totalVersions) % totalVersions);
   };
 
+  const openWaitlist = () => setIsWaitlistOpen(true)
+  const closeWaitlist = () => setIsWaitlistOpen(false)
+
   return (
     <main className="flex min-h-screen flex-col bg-slate-50">
       {/* Navigation */}
-      <NavMenu />
+      <NavMenu onContactClick={openWaitlist} />
       
       {/* Hero Section */}
       <ZenHero
@@ -530,8 +534,8 @@ export default function Home() {
                 </li>
               </ul>
               <div className="mt-auto">
-                <Button variant="outline" className="w-full" asChild>
-                  <a href="#contact">Learn More</a>
+                <Button variant="outline" className="w-full" onClick={openWaitlist}>
+                  Learn More
                 </Button>
               </div>
             </div>
@@ -562,8 +566,8 @@ export default function Home() {
                 </li>
               </ul>
               <div className="mt-auto">
-                <Button className="w-full" asChild>
-                  <a href="#contact">Learn More</a>
+                <Button className="w-full" onClick={openWaitlist}>
+                  Learn More
                 </Button>
               </div>
             </div>
@@ -594,8 +598,8 @@ export default function Home() {
                 </li>
               </ul>
               <div className="mt-auto">
-                <Button variant="outline" className="w-full" asChild>
-                  <a href="#contact">Learn More</a>
+                <Button variant="outline" className="w-full" onClick={openWaitlist}>
+                  Learn More
                 </Button>
               </div>
             </div>
@@ -977,13 +981,13 @@ export default function Home() {
                   <svg className="w-6 h-6 text-slate-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-slate-300">(555) 123-4567</span>
+                  <span className="text-slate-300">(805) 330-1560</span>
                 </div>
               </div>
               
               <div className="mt-6">
-                <Button className="bg-white hover:bg-slate-100 text-slate-900 px-8" size="lg" asChild>
-                  <a href="#contact">Book Your Strategy Call Now</a>
+                <Button className="bg-white hover:bg-slate-100 text-slate-900 px-8" size="lg" onClick={openWaitlist}>
+                  Book Your Strategy Call Now
                 </Button>
               </div>
             </div>
@@ -1057,6 +1061,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <WaitlistModal isOpen={isWaitlistOpen} onClose={closeWaitlist} />
     </main>
   );
 }
